@@ -21,6 +21,12 @@ main {
   align-items: center;
 }
 
+.moves {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #5e1abd;
+}
+
 .object {
   margin: 0;
 }

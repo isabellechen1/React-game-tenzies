@@ -4,9 +4,10 @@ import {nanoid} from "nanoid"
 import Confetti from 'react-confetti'
 
 export default function App(){
-  
+
   const [arrayDice, setArrayDice] = React.useState(allNewDice())
   const [tenzies, setTenzies] = React.useState(false)
+  const [moves, setMoves] = React.useState(1)
 
 //test if it is won
 
@@ -15,6 +16,9 @@ export default function App(){
     const allSame = arrayDice.every(dice => dice.value === arrayDice[0].value)
     if (allHeld && allSame){
       setTenzies(true)
+      setTimeout(() => {
+        setMoves(0)
+      }, 6000);
     }
   }, [arrayDice]
   )
@@ -53,7 +57,16 @@ export default function App(){
     }
   }
 
-//click dice with same value
+// set and update moves
+  function updateMoves(){
+      setMoves(moves+1)
+  }
+
+  function Moves({value}){
+    return <div className="moves">{`Moves: ${value}`}</div>
+  }
+
+  //click dice with same value
 
   function holdDice(id) {
     setArrayDice(oldArrayDice => oldArrayDice.map(dice => {
@@ -62,6 +75,8 @@ export default function App(){
             dice
     }))
   }
+
+
 
   const diceElements = arrayDice.map(dice => (
     <Dice 
@@ -77,15 +92,16 @@ export default function App(){
     <main>
       {tenzies && <Confetti />}
       <h2>Tenzies</h2>
+      <Moves value={moves}/>
       <h4 className="object">Object: Try to be the first person to get all ten of your dice to the same number.</h4>
       <p className="instruction">Players hold all 10 dice. <br />
-      Rolling ten dice, then decides upon a "match number." <br />
+      Rolling 10 dice, then decides upon a "match number." <br />
       Have all 10 dice matching and you that win that round!
       </p>
       <div className="dice-container">
         {diceElements}
       </div>
-      <button className="roll-dice" onClick={roll}>{tenzies ? "New Game" : "Roll"}</button>
+      <button className="roll-dice" onClick={() => { roll(); updateMoves();}}>{tenzies ? "New Game" : "Roll"}</button>
     </main>
   )
 }
