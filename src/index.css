@@ -5,7 +5,6 @@
 body {
   margin: 0;
   background-color: #0b2434;
-  padding: 20px;
   font-family: "Karla", sans-serif;
 }
 
@@ -13,8 +12,8 @@ main {
   background-color: #ace1af;
   max-height: 800px;
   max-width: 800px;
-  border-radius: 5px;
   padding: 10px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -38,28 +37,38 @@ main {
   text-align: center;
 }
 
-.dice-container {
+.dice-main {
   display: grid;
   grid-template: auto auto / repeat(5, 1fr);
-  gap: 20px;
-}
-
-.dice-face {
-  height: 5rem;
-  width: 5rem;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  display: flex;
+  justify-items: center;
   justify-content: center;
-  align-items: center;
-  background-color: rgb(245, 248, 239);
-  font-size: 1.5rem;
+  row-gap: 2em;
+  column-gap: 1em;
+  margin: 1em 0;
 }
 
-.roll-dice {
+.die-container {
+  box-shadow: -5px 6px 5px 1px rgb(0 0 0 / 15%);
+  background: #ffffff;
+  cursor: pointer;
+  padding: 4px;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 10%;
+  max-width: 100%;
+}
+
+.die-container:active {
+  box-shadow: inset 0px 3px 2px rgba(0, 0, 0, 0.15);
+  user-select: none;
+}
+
+/* button */
+
+button {
   height: 3rem;
   width: 8rem;
-  margin-top: 20px;
+  margin-top: 10px;
   border: none;
   border-radius: 6px;
   background-color: #00573f;
@@ -69,8 +78,93 @@ main {
   cursor: pointer;
 }
 
-.roll-dice:active {
+button:active {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/* dice dot */
+
+.dot {
+  display: block;
+  width:15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #5e1abd;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six {
+  display: flex;
+}
+
+.one {
+  justify-content: center;
+  align-items: center;
+}
+
+.two {
+  justify-content: space-between;
+}
+
+.two .dot:nth-of-type(2) {
+  align-self: flex-end;
+}
+
+.three {
+  justify-content: space-between;
+}
+
+.three .dot:nth-of-type(2) {
+  align-self: center;
+}
+
+.three .dot:nth-of-type(3) {
+  align-self: flex-end;
+}
+
+.four {
+  justify-content: space-between;
+}
+
+.five {
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.five .column:nth-of-type(2) {
+  justify-content: center;
+}
+
+.six {
+  justify-content: space-between;
+}
+
+/* record borad */
+
+.record span {
+  position: relative;
+  display: flex;
+  counter-increment: contr;
+  margin-top: 5px;
+}
+
+.record span::before {
+  content: counter(contr) ")";
+  position: absolute;
+  left: -30px;
+}
+
+.board {
+  display: flex;
 }
