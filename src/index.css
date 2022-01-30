@@ -150,11 +150,12 @@ button:active {
   justify-content: space-between;
 }
 
-/* record borad */
+/* record board */
 
 .record span {
   position: relative;
   display: flex;
+  justify-content: space-between;
   counter-increment: contr;
   margin-top: 5px;
 }
@@ -166,5 +167,8 @@ button:active {
 }
 
 .board {
-  display: flex;
+  padding: 10px;
+}
+.board span{
+  padding: 10px;
 }

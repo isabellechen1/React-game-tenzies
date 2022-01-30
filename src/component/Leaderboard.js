@@ -13,9 +13,9 @@ export default function Leaderboard(props) {
 
     return (
         <div className='board'>
-            <span>Time: {diff.toFixed(2)} Sec</span>
+            <span>Time: {diff.toFixed(2)} Sec </span>
             <span>Moves: {props.moves}</span>
-            <span>{timeArray.sort( (a,b) => a-b )} | </span>
+            <span></span>
         </div>
     )
 }

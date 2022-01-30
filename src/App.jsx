@@ -14,14 +14,14 @@ export default function App(){
   const [tenzies, setTenzies] = useState(false)
 // control moves  
   const [moves, setMoves] = useState(1)
-  //control the time the game started
+//control the time the game started
   const [start, setStartTime] = useState('');
-  //control when the game started
+//control when the game started
   const [hasStarted, setHasStarted] = useState(false);
-  //control the time the game ended
+//control the time the game ended
   const [end, setEndTime] = useState('');
 // control best record board
-const [showBoard, setShowBoard] = useState(false)
+  const [showBoard, setShowBoard] = useState(false)
 
 
 
