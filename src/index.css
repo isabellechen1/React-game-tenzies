@@ -13,6 +13,7 @@ main {
   max-height: 800px;
   max-width: 800px;
   padding: 10px;
+  margin: auto;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -88,7 +89,7 @@ button:active {
 
 .dot {
   display: block;
-  width:15px;
+  width: 15px;
   height: 15px;
   border-radius: 50%;
   background-color: #5e1abd;
@@ -169,6 +170,6 @@ button:active {
 .board {
   padding: 10px;
 }
-.board span{
+.board span {
   padding: 10px;
 }
