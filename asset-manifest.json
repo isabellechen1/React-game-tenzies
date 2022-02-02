@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/isabellechen1/React-game-tenzies/static/css/main.5b3f3bac.css",
-    "main.js": "/isabellechen1/React-game-tenzies/static/js/main.5671eab0.js",
-    "static/js/787.d64bb760.chunk.js": "/isabellechen1/React-game-tenzies/static/js/787.d64bb760.chunk.js",
-    "index.html": "/isabellechen1/React-game-tenzies/index.html",
-    "main.5b3f3bac.css.map": "/isabellechen1/React-game-tenzies/static/css/main.5b3f3bac.css.map",
-    "main.5671eab0.js.map": "/isabellechen1/React-game-tenzies/static/js/main.5671eab0.js.map",
-    "787.d64bb760.chunk.js.map": "/isabellechen1/React-game-tenzies/static/js/787.d64bb760.chunk.js.map"
+    "main.css": "/React-game-tenzies/static/css/main.5b3f3bac.css",
+    "main.js": "/React-game-tenzies/static/js/main.7eca0514.js",
+    "static/js/787.d64bb760.chunk.js": "/React-game-tenzies/static/js/787.d64bb760.chunk.js",
+    "index.html": "/React-game-tenzies/index.html",
+    "main.5b3f3bac.css.map": "/React-game-tenzies/static/css/main.5b3f3bac.css.map",
+    "main.7eca0514.js.map": "/React-game-tenzies/static/js/main.7eca0514.js.map",
+    "787.d64bb760.chunk.js.map": "/React-game-tenzies/static/js/787.d64bb760.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5b3f3bac.css",
-    "static/js/main.5671eab0.js"
+    "static/js/main.7eca0514.js"
   ]
 }
